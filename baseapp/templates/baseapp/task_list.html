@@ -1,0 +1,18 @@
+
+{% extends 'baseapp/base.html' %}
+
+{% block content %}
+<h3>Your Tasks</h3>
+<ul>
+    {% for task in tasks %}
+        <li>Title: {{ task.title }}</li>
+        <p>Description: {{ task.description }}</p>
+        <a href="{% url 'task_update' task.id %}">EDIT</a>
+        &nbsp;
+        <a class="delete-link" href="{% url 'task_delete' task.id %}">DELETE</a>
+    {% empty %}
+        <li>No tasks available.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+

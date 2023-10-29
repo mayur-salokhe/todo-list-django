@@ -1,0 +1,18 @@
+{% extends 'baseapp/base.html' %}
+
+{% block content %}
+
+<h1> Home Page</h1>
+
+{% if user.is_authenticated %}
+	<p>Name: {{user.first_name}} {{ user.last_name}}</p>
+	<p>Username: {{user.username}}</p>
+	
+	<p>Email: {{user.email}}</p>
+	<br>
+	<a href="{% url 'task_list' %}">Go to Task List</a>
+    <br>
+
+{% endif %}
+
+{% endblock %}
