@@ -1,5 +1,4 @@
 # todo-list-django
-CRUD To-Do List Django Rest Framework
 
 To-Do List in Django Python
 Features:-
